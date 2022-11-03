@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:the_responsive_project/pages/home/widgets/app_bar/mobile_app_bar.dart';
+import 'package:the_responsive_project/pages/home/widgets/app_bar/web_app_bar.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -12,7 +13,8 @@ class HomePage extends StatelessWidget {
               ? PreferredSize(
                   child: MobileAppBar(),
                   preferredSize: Size(double.infinity, 56))
-              : AppBar(),
+              : PreferredSize(
+                  child: WebAppBar(), preferredSize: Size(double.infinity, 72)),
           drawer: Drawer(),
         );
       }),
