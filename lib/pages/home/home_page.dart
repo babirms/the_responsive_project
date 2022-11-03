@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
                   preferredSize: const Size(double.infinity, 72),
                   child: WebAppBar(),
                 ),
-          drawer: const Drawer(),
+          drawer: constraints.maxWidth < 800 ? const Drawer() : null,
         );
       }),
     );
