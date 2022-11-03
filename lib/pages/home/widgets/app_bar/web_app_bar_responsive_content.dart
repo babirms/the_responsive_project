@@ -15,8 +15,14 @@ class WebAppBarResponsiveContent extends StatelessWidget {
                   border: Border.all(color: Colors.grey[600] as Color),
                 ),
                 child: Row(children: [
+                  const SizedBox(
+                    width: 4,
+                  ),
                   IconButton(
-                    icon: const Icon(Icons.search),
+                    icon: Icon(
+                      Icons.search,
+                      color: Colors.grey[500] as Color,
+                    ),
                     onPressed: () {},
                   ),
                   const Expanded(
@@ -24,12 +30,33 @@ class WebAppBarResponsiveContent extends StatelessWidget {
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Pesquise aqui',
+                        isCollapsed: true,
                       ),
                     ),
                   ),
                 ]),
               ),
             ),
+            if (constraints.maxWidth >= 400) ...[
+              const SizedBox(width: 8),
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  'Aprender',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ],
+            if (constraints.maxWidth >= 500) ...[
+              const SizedBox(width: 8),
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  'Flutter',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ],
           ],
         );
       })),
