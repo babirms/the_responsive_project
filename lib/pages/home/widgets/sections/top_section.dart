@@ -19,8 +19,8 @@ class TopSection extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 50,
-                left: 50,
+                top: 40,
+                left: 40,
                 child: Card(
                   color: Colors.black,
                   elevation: 8,
@@ -32,7 +32,57 @@ class TopSection extends StatelessWidget {
                           const Text(
                             'Aprenda Flutter com este curso',
                             style: TextStyle(
-                              fontSize: 40,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'Bora aprender Flutter com o professor Daniel Ciolfi! Cursos por apenas R\$22,90. Qualidade garantida.',
+                            style: TextStyle(fontSize: 15, color: Colors.white),
+                          ),
+                          const SizedBox(height: 16),
+                          CustomSearchField(),
+                        ],
+                      )),
+                ),
+              ),
+            ],
+          ),
+        );
+      }
+
+      if (maxWidth >= 800) {
+        return SizedBox(
+          height: 320,
+          child: Stack(
+            children: [
+              SizedBox(
+                width: double.infinity,
+                child: Image.network(
+                  'https://images.pexels.com/photos/892757/pexels-photo-892757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Positioned(
+                top: 20,
+                left: 20,
+                child: Card(
+                  color: Colors.black,
+                  elevation: 8,
+                  child: Container(
+                      width: 350,
+                      padding: const EdgeInsets.all(22),
+                      child: Column(
+                        children: [
+                          const Text(
+                            'Aprenda Flutter com este curso',
+                            style: TextStyle(
+                              fontSize: 35,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
