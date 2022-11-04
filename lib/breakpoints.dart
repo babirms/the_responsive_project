@@ -1,2 +1,2 @@
-const mobileBreakpoint = 800;
+const mobileBreakpoint = 700;
 const tabletBreakpoint = 1200;

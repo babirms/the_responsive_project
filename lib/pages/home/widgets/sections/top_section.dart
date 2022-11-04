@@ -120,6 +120,7 @@ class TopSection extends StatelessWidget {
           Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     'Aprenda Flutter com este curso',
