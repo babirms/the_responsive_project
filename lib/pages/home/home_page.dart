@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_responsive_project/breakpoints.dart';
 import 'package:the_responsive_project/pages/home/widgets/app_bar/mobile_app_bar.dart';
 import 'package:the_responsive_project/pages/home/widgets/app_bar/web_app_bar.dart';
 import 'package:the_responsive_project/pages/home/widgets/sections/top_section.dart';
@@ -10,7 +11,7 @@ class HomePage extends StatelessWidget {
       builder: ((context, constraints) {
         return Scaffold(
           backgroundColor: Colors.black,
-          appBar: constraints.maxWidth < 800
+          appBar: constraints.maxWidth < mobileBreakpoint
               ? PreferredSize(
                   preferredSize: const Size(double.infinity, 56),
                   child: MobileAppBar(),
@@ -19,7 +20,8 @@ class HomePage extends StatelessWidget {
                   preferredSize: const Size(double.infinity, 72),
                   child: WebAppBar(),
                 ),
-          drawer: constraints.maxWidth < 800 ? const Drawer() : null,
+          drawer:
+              constraints.maxWidth < mobileBreakpoint ? const Drawer() : null,
           body: Align(
             alignment: Alignment.topCenter,
             child: ConstrainedBox(

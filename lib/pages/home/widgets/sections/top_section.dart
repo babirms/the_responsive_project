@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_responsive_project/breakpoints.dart';
 import 'package:the_responsive_project/pages/home/widgets/custom_search_field.dart';
 
 class TopSection extends StatelessWidget {
@@ -6,7 +7,7 @@ class TopSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       final maxWidth = constraints.maxWidth;
-      if (maxWidth >= 1200) {
+      if (maxWidth >= tabletBreakpoint) {
         return AspectRatio(
           aspectRatio: 3.2,
           child: Stack(
@@ -56,7 +57,7 @@ class TopSection extends StatelessWidget {
         );
       }
 
-      if (maxWidth >= 800) {
+      if (maxWidth >= mobileBreakpoint) {
         return SizedBox(
           height: 320,
           child: Stack(
