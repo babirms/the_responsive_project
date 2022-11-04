@@ -29,13 +29,20 @@ class AdvantagesSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      alignment: WrapAlignment.spaceEvenly,
-      children: [
-        buildAdvantages('+45.000 alunos', 'Didática garantida'),
-        buildAdvantages('+45.000 alunos', 'Didática garantida'),
-        buildAdvantages('+45.000 alunos', 'Didática garantida'),
-      ],
+    return Container(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+      decoration: const BoxDecoration(
+          border: Border(bottom: BorderSide(color: Colors.grey))),
+      child: Wrap(
+        alignment: WrapAlignment.spaceEvenly,
+        runSpacing: 16,
+        spacing: 8,
+        children: [
+          buildAdvantages('+45.000 alunos', 'Didática garantida'),
+          buildAdvantages('+45.000 alunos', 'Didática garantida'),
+          buildAdvantages('+45.000 alunos', 'Didática garantida'),
+        ],
+      ),
     );
   }
 }
