@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
     return LayoutBuilder(
       builder: ((context, constraints) {
         return Scaffold(
+          backgroundColor: Colors.black,
           appBar: constraints.maxWidth < 800
               ? PreferredSize(
                   preferredSize: const Size(double.infinity, 56),
@@ -22,8 +23,7 @@ class HomePage extends StatelessWidget {
           body: Align(
             alignment: Alignment.topCenter,
             child: ConstrainedBox(
-                constraints:
-                    const BoxConstraints(maxWidth: 1400, maxHeight: 300),
+                constraints: const BoxConstraints(maxWidth: 1400),
                 child: ListView(
                   children: [TopSection()],
                 )),

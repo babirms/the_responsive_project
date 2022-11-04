@@ -5,6 +5,7 @@ class CustomSearchField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       style: const TextStyle(color: Colors.white),
+      cursorColor: Colors.white,
       decoration: InputDecoration(
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.white),
